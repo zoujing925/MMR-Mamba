@@ -7,7 +7,9 @@ Pytorch Code for the paper ["MMR-Mamba: Multi-Modal MRI Reconstruction with Mamb
 # Environment
 
 CUDA Version: 11.7
+
 python=3.8.18 
+
 pytorch=1.13.1
 
 # Inroduction
@@ -17,7 +19,10 @@ Multi-modal MRI offers valuable complementary information for diagnosis and trea
 
 ## Links for downloading the public datasets:
 
-1) fastMRI Dataset - <a href="https://fastmri.med.nyu.edu/"> Link </a>
+1) BraTS20 
+2) fastMRI Dataset - <a href="https://fastmri.med.nyu.edu/"> Link </a>
+
+We provide the IDs of the data used in the BraTS dataset as CSV files, located in the ./dataloaders/cv_splits_100patients/ folder. These files contain the patient IDs corresponding to the dataset splits.
 
 ## Train MMR-Mamba
 ```bash 
@@ -26,8 +31,8 @@ bash train_munet.sh
 
 ## Ackonwledgements
 
-We give acknowledgements to [fastMRI](https://github.com/facebookresearch/fastMRI), [Swin-Transformer
-](https://github.com/microsoft/Swin-Transformer), and [Pan-Mamba](https://github.com/alexhe101/Pan-Mamba).
+We give acknowledgements to [fastMRI](https://github.com/facebookresearch/fastMRI), [MTrans
+](https://github.com/chunmeifeng/MTrans), and [Pan-Mamba](https://github.com/alexhe101/Pan-Mamba).
 
 
 # Citation
