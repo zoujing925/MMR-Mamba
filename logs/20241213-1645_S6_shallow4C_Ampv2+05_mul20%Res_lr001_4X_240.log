@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_SOTA.py", line 25, in <module>
+    from networks.compare_models import build_model_from_name
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/__init__.py", line 11, in <module>
+    from .MMR import build_model as MMR
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/MMR.py", line 9, in <module>
+    from .t1_mamba_simple import Mamba
+ModuleNotFoundError: No module named 'networks.compare_models.t1_mamba_simple'
