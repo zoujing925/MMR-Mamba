@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "train_SOTA.py", line 25, in <module>
+    from networks.compare_models import build_model_from_name
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/__init__.py", line 10, in <module>
+    from .panmanba_attention import build_model as PanManbaAttention
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/panmanba_attention.py", line 14, in <module>
+    from .mca import CrossTransformerEncoderLayer
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/mca.py", line 4, in <module>
+    from .transformer import Mlp
+ModuleNotFoundError: No module named 'networks.compare_models.transformer'

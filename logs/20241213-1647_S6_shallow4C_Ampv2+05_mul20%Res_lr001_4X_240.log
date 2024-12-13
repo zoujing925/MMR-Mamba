@@ -1,0 +1,13 @@
+Namespace(MRIDOWN='4X', base_lr=0.001, batch_size=1, clip_grad='True', exp='S6_shallow4C_Ampv2+05_mul20%Res_lr001_4X_240', gpu='0', input_modality='t2', input_normalize='mean_std', kspace_refine='False', kspace_round='round4', low_field_SNR=0, max_iterations=10, modality='t2', model_name='mmr_mamba', norm='False', phase='train', relation_consistency='False', root_path='../../MRI/BRATS_100patients/image_100patients_4X/', seed=1337, use_multi_modal='True')
+number of params: 0.461 M 483113
+number of params without requires_grad: 0.46 M 483113
+Number of images in train: 3621
+Number of images in test: 1088
+max_epoch: 1 3621
+  0%|                                           | 0/1 [00:00<?, ?it/s]Epoch 0 Evaluation:
+New Best Network:
+[T2 MRI:] average MSE: 62.68338876761642 average PSNR: 30.422108337769686 average SSIM: 0.786464547958106 average NMSE: 23.929231733880183, average NMSE1: 0.05243112660689451
+[T2 MRI:] std MSE: 21.875098656452877 std PSNR: 1.5349236561665096 std SSIM: 0.05119267111157475 std NMSE: 8.088588510198347, std NMSE: 0.017030851047746643
+  0%|                                           | 0/1 [02:04<?, ?it/s]{'T2_NMSE': 62.68338876761642, 'T2_PSNR': 30.422108337769686, 'T2_SSIM': 0.786464547958106}
+save model to ../model_241005cvpr/S6_shallow4C_Ampv2+05_mul20%Res_lr001_4X_240/iter_10.pth
+

@@ -1,0 +1,13 @@
+Namespace(MRIDOWN='4X', base_lr=0.001, batch_size=0, clip_grad='True', exp='S6_shallow4C_Ampv2+05_mul20%Res_lr001_4X_240', gpu='0', input_modality='t2', input_normalize='mean_std', kspace_refine='False', kspace_round='round4', low_field_SNR=0, max_iterations=10, modality='t2', model_name='panmamba_new', norm='False', phase='train', relation_consistency='False', root_path='../../MRI/BRATS_100patients/image_100patients_4X/', seed=1337, use_multi_modal='True')
+number of params: 0.461 M 483113
+number of params without requires_grad: 0.46 M 483113
+Number of images in train: 3621
+Number of images in test: 1088
+Traceback (most recent call last):
+  File "train_SOTA.py", line 174, in <module>
+    trainloader = DataLoader(db_train, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 350, in __init__
+    batch_sampler = BatchSampler(sampler, batch_size, drop_last)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/utils/data/sampler.py", line 232, in __init__
+    raise ValueError("batch_size should be a positive integer value, "
+ValueError: batch_size should be a positive integer value, but got batch_size=0

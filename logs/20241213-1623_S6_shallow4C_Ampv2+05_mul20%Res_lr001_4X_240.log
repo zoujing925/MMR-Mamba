@@ -1,0 +1,7 @@
+Namespace(MRIDOWN='4X', base_lr=0.001, batch_size=1, clip_grad='True', exp='S6_shallow4C_Ampv2+05_mul20%Res_lr001_4X_240', gpu='0', input_modality='t2', input_normalize='mean_std', kspace_refine='False', kspace_round='round4', low_field_SNR=0, max_iterations=10, modality='t2', model_name='panmamba_new', norm='False', phase='train', relation_consistency='False', root_path='../../MRI/BRATS_100patients/image_100patients_4X/', seed=1337, use_multi_modal='True')
+number of params: 0.461 M 483113
+number of params without requires_grad: 0.46 M 483113
+Number of images in train: 3621
+Number of images in test: 1088
+max_epoch: 1 3621
+  0%|                                           | 0/1 [00:00<?, ?it/s]Epoch 0 Evaluation:

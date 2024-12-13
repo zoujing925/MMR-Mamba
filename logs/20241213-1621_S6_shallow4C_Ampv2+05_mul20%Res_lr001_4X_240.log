@@ -1,0 +1,29 @@
+Namespace(MRIDOWN='4X', base_lr=0.001, batch_size=4, clip_grad='True', exp='S6_shallow4C_Ampv2+05_mul20%Res_lr001_4X_240', gpu='0', input_modality='t2', input_normalize='mean_std', kspace_refine='False', kspace_round='round4', low_field_SNR=0, max_iterations=100000, modality='t2', model_name='panmamba_new', norm='False', phase='train', relation_consistency='False', root_path='../../MRI/BRATS_100patients/image_100patients_4X/', seed=1337, use_multi_modal='True')
+number of params: 0.461 M 483113
+number of params without requires_grad: 0.46 M 483113
+Number of images in train: 3621
+Number of images in test: 1088
+max_epoch: 111 906
+  0%|                                         | 0/111 [00:00<?, ?it/s]  0%|                                         | 0/111 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "train_SOTA.py", line 230, in <module>
+    outputs = network(t2_in, t1_in) 
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/panmanba_new.py", line 750, in forward
+    ms_f,residual_ms_f = self.deep_fusion3(ms_f,residual_ms_f,pan_f)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/panmanba_new.py", line 581, in forward
+    global_f = self.cross_mamba(self.norm1(ms),extra_emb=self.norm2(pan))
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/pan_mamba_simple.py", line 277, in forward
+    out_b = mamba_inner_fn_no_out_proj(
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/mamba_ssm-1.0.1-py3.8-linux-x86_64.egg/mamba_ssm/ops/selective_scan_interface.py", line 632, in mamba_inner_fn_no_out_proj
+    return MambaInnerFnNoOutProj.apply(xz, conv1d_weight, conv1d_bias, x_proj_weight, delta_proj_weight,
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/cuda/amp/autocast_mode.py", line 97, in decorate_fwd
+    return fwd(*args, **kwargs)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/mamba_ssm-1.0.1-py3.8-linux-x86_64.egg/mamba_ssm/ops/selective_scan_interface.py", line 213, in forward
+    out, scan_intermediates, out_z = selective_scan_cuda.fwd(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 58.00 MiB (GPU 0; 23.69 GiB total capacity; 8.18 GiB already allocated; 31.00 MiB free; 8.51 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

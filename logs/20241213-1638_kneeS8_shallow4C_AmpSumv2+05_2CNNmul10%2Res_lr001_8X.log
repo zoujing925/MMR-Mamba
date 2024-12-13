@@ -1,0 +1,32 @@
+Namespace(ACCELERATIONS=[8], CENTER_FRACTIONS=[0.04], MASKTYPE='random', MRIDOWN='8X', base_lr=0.001, batch_size=1, clip_grad='True', exp='kneeS8_shallow4C_AmpSumv2+05_2CNNmul10%2Res_lr001_8X', gpu='1', input_modality='t2', input_normalize='mean_std', kspace_refine='False', kspace_round='round4', low_field_SNR=0, max_iterations=10, modality='t2', model_name='mmr_mamba_knee', norm='False', phase='train', relation_consistency='False', root_path='kneeS8_shallow4C_Ampv2+05_2CNNsum5%2Res_lr001_4X../../MRI/BRATS_100patients/image_100patients_8X/', seed=1337, use_multi_modal='True')
+number of params: 0.94 M
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_relu() for <class 'torch.nn.modules.activation.LeakyReLU'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.instancenorm.InstanceNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv1d'>.
+[INFO] Register count_adap_avgpool() for <class 'torch.nn.modules.pooling.AdaptiveAvgPool2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+FLOPs: 31.069957226514816 G params: 0.30661869049072266 M
+Number of images in train: 8332
+Number of images in val: 1665
+max_epoch: 1 8332
+  0%|                                           | 0/1 [00:00<?, ?it/s]  0%|                                           | 0/1 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "train_knee.py", line 210, in <module>
+    outputs = network(t2_in, t1_in)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/MMR_knee.py", line 803, in forward
+    [out1, out2] = self.exchange([out1, out2])
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/MMR_knee.py", line 353, in forward
+    out = self.exchange(out, self.insnorm_list, self.insnorm_threshold)
+  File "/home/sh2/anaconda3/envs/mamba/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sh2/users/zj/code/MMR-Mamba/networks/compare_models/MMR_knee.py", line 288, in forward
+    x1, x2 = torch.zeros_like(x[0]), torch.zeros_like(x[1])
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB (GPU 0; 23.69 GiB total capacity; 4.87 GiB already allocated; 10.06 MiB free; 4.96 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
