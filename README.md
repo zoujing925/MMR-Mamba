@@ -37,10 +37,12 @@ We give acknowledgements to [fastMRI](https://github.com/facebookresearch/fastMR
 
 # Citation
 ```bash
-@article{zou2024mmr,
-  title={MMR-Mamba: Multi-Modal MRI Reconstruction with Mamba and Spatial-Frequency Information Fusion},
+@article{zou2025mmr,
+  title={MMR-Mamba: Multi-modal MRI reconstruction with Mamba and spatial-frequency information fusion},
   author={Zou, Jing and Liu, Lanqing and Chen, Qi and Wang, Shujun and Hu, Zhanli and Xing, Xiaohan and Qin, Jing},
-  journal={arXiv preprint arXiv:2406.18950},
-  year={2024}
+  journal={Medical Image Analysis},
+  pages={103549},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
